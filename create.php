@@ -7,7 +7,7 @@
     <title>Randonnées, ajout</title>
 </head>
 <body>
-    <form action="">
+    <form action="create.php" method="post">
         <input type="text" name="name" placeholder="Nom de la randonnée">
         <select name="difficulty" id="difficulty">
             <option value="très facile">Très facile</option>
@@ -17,9 +17,10 @@
             <option value="très difficile">Très difficile</option>
         </select>
         <input type="number" name="distance">
-        <!-- Ajoutez un / des champs pour gérer la donnée de type time à insérer via PHP -->
-        .....
+        <input type="time" name="duration" id="duration">
         <input type="number" name="height_difference">
+        <button type="submit" name="newRando">valider</button>
     </form>
+    <a href="index.php">home</a>
 </body>
 </html>
