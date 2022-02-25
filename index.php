@@ -1,5 +1,9 @@
 <?php
 
+require 'connPDO.php';
+$pdo = new connPDO();
+$db = $pdo->conn();
+
 ?>
 <!doctype html>
 <html lang="fr">
@@ -12,7 +16,15 @@
     <title>rando</title>
 </head>
 <body>
-<a href="create.php">ajouter une randonnée</a>
+    <h1>Randonnée</h1>
+    <ul>
+        <li>
+            <a href="create.php">ajouter une randonnée</a>
+        </li>
+        <li>
+            <a href="read.php">liste</a>
+        </li>
+    </ul>
 </body>
 </html>
 
