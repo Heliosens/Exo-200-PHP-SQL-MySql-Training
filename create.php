@@ -23,7 +23,7 @@ $db = $pdo->conn();
             <option value="Difficile">Difficile</option>
             <option value="Très difficile">Très difficile</option>
         </select>
-        <input type="number" name="distance">
+        <input type="number" name="distance" step=0.1>
         <input type="time" name="duration" id="duration">
         <input type="number" name="height_difference">
         <button type="submit" name="newRando">valider</button>
@@ -40,7 +40,6 @@ $db = $pdo->conn();
 </html>
 <?php
     if(isset($_POST['newRando'])){
-
         try {
             $stm = $db->prepare("
                 INSERT INTO hiking (name, difficulty, distance, duration, height_difference)

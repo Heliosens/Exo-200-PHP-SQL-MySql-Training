@@ -30,7 +30,7 @@ $u = $_GET['u'];
                     <option value="Difficile">Difficile</option>
                     <option value="Très difficile">Très difficile</option>
                 </select>
-                <input type="number" name="distance" value="<?=$rando[$u]['distance']?>">
+                <input type="number" name="distance" step="0.1" value="<?=$rando[$u]['distance']?>">
                 <input type="time" name="duration" id="duration" value="<?=$rando[$u]['duration']?>">
                 <input type="number" name="height_difference" value="<?=$rando[$u]['height_difference']?>">
                 <button type="submit" name="updateRando">valider</button>
